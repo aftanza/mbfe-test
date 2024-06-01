@@ -4,17 +4,13 @@
 .burger-drawer {
     position: absolute;
     width: 100vw;
-    display: grid;
-    // visibility: hidden;
+    display: none;
 
     row-gap: 5px;
     flex-direction: column;
     top: 100%;
 
     // overflow: hidden;
-    height: 0;
-    opacity: 0;
-    transform: translateY(-200%);
 
     transition: transform 0.15s ease-in-out, opacity 0.15s ease-in-out,
         height 0.15s ease-in-out;
@@ -55,7 +51,7 @@
 
 @media only screen and (max-width: variables.$screen-medium) {
     .burger-drawer {
-        height: auto;
+        display: grid;
         &.drawer-open {
             transform: translateX(0);
             opacity: 1;
