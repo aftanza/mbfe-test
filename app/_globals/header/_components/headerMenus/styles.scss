@@ -1,12 +1,12 @@
-@use "variables";
-@use "functions";
+@use "var";
+@use "f";
 
 .menu {
     display: flex;
     flex: 1;
     // align-items: center;
     justify-content: center;
-    gap: functions.rem-calc(30px);
+    gap: f.rem-calc(30px);
     &__item {
         width: 9rem;
         display: flex;
@@ -49,16 +49,16 @@
     opacity: 0.3;
 }
 
-@media only screen and (max-width: variables.$screen-large) {
+@media only screen and (max-width: var.$screen-large) {
     .menu {
-        gap: functions.rem-calc(10px);
+        gap: f.rem-calc(10px);
     }
     .menu__item {
         width: calc(auto + 7px);
         // width: 5rem;
     }
     .menu__item__link .mantine-Text-root {
-        font-size: functions.rem-calc(18px);
+        font-size: f.rem-calc(18px);
     }
 }
 
@@ -69,7 +69,7 @@
     align-items: center;
 }
 
-@media only screen and (max-width: variables.$screen-medium) {
+@media only screen and (max-width: var.$screen-medium) {
     .menu {
         display: none;
     }

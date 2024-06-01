@@ -1,5 +1,5 @@
-@use "variables";
-@use "functions";
+@use "var";
+@use "f";
 
 .burger-drawer {
     position: absolute;
@@ -49,7 +49,7 @@
     }
 }
 
-@media only screen and (max-width: variables.$screen-medium) {
+@media only screen and (max-width: var.$screen-medium) {
     .burger-drawer {
         display: grid;
         &.drawer-open {

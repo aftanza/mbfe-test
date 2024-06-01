@@ -1,5 +1,5 @@
-@use "functions";
-@use "variables";
+@use "f";
+@use "var";
 
 .header {
     display: flex;
@@ -11,7 +11,7 @@
     // position: -webkit-sticky;
     position: sticky;
     top: 0;
-    padding: functions.rem-calc(50px);
+    padding: f.rem-calc(50px);
     &__logo {
         display: flex;
         flex: 1;
