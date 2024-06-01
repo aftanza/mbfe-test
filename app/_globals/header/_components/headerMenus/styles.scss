@@ -1,0 +1,79 @@
+@use "variables";
+@use "functions";
+
+.menu {
+    display: flex;
+    flex: 1;
+    // align-items: center;
+    justify-content: center;
+    gap: functions.rem-calc(30px);
+    &__item {
+        width: 9rem;
+        display: flex;
+        justify-content: center;
+        &__link {
+            text-decoration: none;
+            color: black;
+            &:hover {
+                color: #005479;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// Select the mantine Text for header menu
+.menu__item__link .mantine-Text-root {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    // font-size: 10px;
+    transition: color 0.15s ease-in-out, transform 0.15s ease-in-out,
+        opacity 0.15s ease-in-out;
+    opacity: 0.5;
+    &.active {
+        color: #005479;
+        opacity: 1;
+        font-weight: 700;
+    }
+    &:hover {
+        opacity: 1;
+        transform: scale(1.02);
+    }
+}
+
+// Divider
+.menu__divider {
+    width: 1px;
+    background-color: black;
+    opacity: 0.3;
+}
+
+@media only screen and (max-width: variables.$screen-large) {
+    .menu {
+        gap: functions.rem-calc(10px);
+    }
+    .menu__item {
+        width: calc(auto + 7px);
+        // width: 5rem;
+    }
+    .menu__item__link .mantine-Text-root {
+        font-size: functions.rem-calc(18px);
+    }
+}
+
+.burger-menu {
+    display: none;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@media only screen and (max-width: variables.$screen-medium) {
+    .menu {
+        display: none;
+    }
+    .burger-menu {
+        display: flex;
+    }
+}

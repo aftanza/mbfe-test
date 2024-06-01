@@ -1,0 +1,23 @@
+@use "functions";
+@use "variables";
+
+.header {
+    display: flex;
+    background-color: white;
+    height: 90px;
+    // padding: 26px 44px 26.963px 45px;
+    justify-content: center;
+    align-items: center;
+    // position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: functions.rem-calc(50px);
+    &__logo {
+        display: flex;
+        flex: 1;
+    }
+    &__menu {
+        display: flex;
+        flex: 1;
+    }
+}

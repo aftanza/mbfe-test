@@ -1,4 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+
+import path from "path";
+const nextConfig = {
+    productionBrowserSourceMaps: true,
+    sassOptions: {
+        includePaths: [path.join(process.cwd(), "app/styles")],
+    },
+};
 
 export default nextConfig;
