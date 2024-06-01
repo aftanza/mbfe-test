@@ -15,4 +15,12 @@ export const theme = createTheme({
         lg: rem(36),
         xl: rem(100),
     },
+    headings: {
+        sizes: {
+            h1: {
+                fontWeight: "700",
+                fontSize: rem(36),
+            },
+        },
+    },
 });
