@@ -1,0 +1,51 @@
+@use "f";
+
+.block-2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    & > div {
+        padding: f.rem-calc(50px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__left {
+        background-color: #fbbc05;
+    }
+    &__right {
+        background-color: #f57600;
+    }
+    transition: height 0.15 ease-in-out;
+}
+
+.block-2__left__wrapper__text {
+    display: flex;
+    flex-direction: column;
+    gap: f.rem-calc(15px);
+    margin-bottom: f.rem-calc(15px);
+    // p,
+    // h1 {
+    //     padding: 7px 0;
+    // }
+}
+
+.block-2__right {
+    &__wrapper {
+        // flex: 1;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        &__text {
+            display: flex;
+            // flex: 1;
+        }
+
+        &__score {
+            flex: 1;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: f.rem-calc(55px);
+            align-items: flex-end;
+        }
+    }
+}

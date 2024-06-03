@@ -26,7 +26,7 @@ const HeaderMenus = ({ menus }: HeaderMenusProps) => {
 
     useEffect(() => {
         setActivePage(pathname);
-        console.log("current page: ", pathname);
+        // console.log("current page: ", pathname);
     }, [pathname]);
 
     useEffect(() => {

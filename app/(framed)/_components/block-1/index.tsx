@@ -1,13 +1,43 @@
 "use client";
 
-import { Text, Title } from "@mantine/core";
+import { Text, Title, rem } from "@mantine/core";
 import "./styles.scss";
+import Image from "next/image";
 
 const Block1 = () => {
     return (
         <div className="block-1">
-            <Title order={1}>asd</Title>
-            <Text>Textasujiofisdg</Text>
+            <div className="block-1__text">
+                <Title order={1} lh={"2"} c={"white"}>
+                    Apa itu (insert logo)
+                </Title>
+                <Text
+                    fw={500}
+                    c={"white"}
+                    style={{ textAlign: "justify", wordSpacing: rem(5) }}
+                >
+                    <Text span fw={700} inherit>
+                        mejabelajar
+                    </Text>{" "}
+                    adalah sebuah organisasi{" "}
+                    <Text span fw={700} inherit>
+                        non-profit
+                    </Text>{" "}
+                    yang mengadakan kegiatan pembelajaran gratis untuk
+                    siswa-siswi marginal sebagai respon terhadap isu kesenjangan
+                    pendidikan di Indonesia
+                </Text>
+            </div>
+            <div className="block-1__image">
+                <Image
+                    src={"/homepage/block-1/school-visit.png"}
+                    alt="School visit pic"
+                    // layout={"fill"}
+                    fill={true}
+                    // width={400}
+                    objectFit={"contain"}
+                />
+            </div>
         </div>
     );
 };
