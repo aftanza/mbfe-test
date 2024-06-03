@@ -1,4 +1,5 @@
 @use "f";
+@use "var";
 
 .block-2 {
     display: grid;
@@ -48,5 +49,12 @@
             align-items: flex-end;
             justify-content: center;
         }
+    }
+}
+
+@media only screen and (max-width: var.$screen-medium) {
+    .block-2 {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
     }
 }

@@ -1,8 +1,5 @@
-"use client";
-
 import "./styles.scss";
 import TujuanUtamaPoint from "./_components/tujuan-utama-point";
-import TujuanUtamaPoint2 from "./_components/tujuan-utama-point-2";
 import { Text, Title } from "@mantine/core";
 import PisaScore from "./_components/pisa-scores";
 

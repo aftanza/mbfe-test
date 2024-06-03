@@ -32,9 +32,7 @@ const Block1 = () => {
                 <Image
                     src={"/homepage/block-1/school-visit.png"}
                     alt="School visit pic"
-                    // layout={"fill"}
                     fill={true}
-                    // width={400}
                     objectFit={"contain"}
                 />
             </div>
