@@ -9,16 +9,16 @@
     &__provinsi {
         border-radius: 10px;
         display: inline-block;
-        padding: 0 f.rem-calc(10px);
-        font-weight: 600;
+        padding: 0 f.rem-calc(10px) !important;
+        font-weight: 600 !important;
 
         &__yellow {
             background-color: #fbbc05;
-            color: black;
+            color: black !important;
         }
         &__blue {
             background-color: #005479;
-            color: white;
+            color: white !important;
         }
     }
 }
