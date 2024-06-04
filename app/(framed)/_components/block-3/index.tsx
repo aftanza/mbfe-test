@@ -7,7 +7,7 @@ const Block3 = () => {
         <div className="block-3">
             <div className="block-3__shapes block-3__shapes-left">
                 <Image
-                    src={"/homepage/block-2/shapes.svg"}
+                    src={"/homepage/block-3/shapes.svg"}
                     width={400}
                     height={400}
                     alt="shapes"
@@ -17,7 +17,7 @@ const Block3 = () => {
             <div className="block-3__kelas">
                 <div className="block-3__kelas__circle">
                     <Image
-                        src={"/homepage/block-2/webinar.svg"}
+                        src={"/homepage/block-3/webinar.svg"}
                         width={400}
                         height={400}
                         alt="book"
@@ -35,12 +35,12 @@ const Block3 = () => {
             <div className="block-3__modul">
                 <div className="block-3__modul__text-wrapper">
                     <div className="block-3__modul__text-wrapper__text">
-                        Kelas Open Chat
+                        Modul Belajar
                     </div>
                 </div>
                 <div className="block-3__modul__circle">
                     <Image
-                        src={"/homepage/block-2/book.svg"}
+                        src={"/homepage/block-3/book.svg"}
                         width={400}
                         height={400}
                         alt="book"
@@ -49,7 +49,7 @@ const Block3 = () => {
             </div>
             <div className="block-3__shapes block-3__shapes-right">
                 <Image
-                    src={"/homepage/block-2/shapes.svg"}
+                    src={"/homepage/block-3/shapes.svg"}
                     width={400}
                     height={400}
                     alt="shapes"

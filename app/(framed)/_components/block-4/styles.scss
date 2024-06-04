@@ -1,0 +1,37 @@
+@use "f";
+
+$map-w: f.rem-calc(1320px);
+$map-h: f.rem-calc(479px);
+$map-ratio: calc($map-w / $map-h);
+
+.block-4 {
+    position: relative;
+    padding: f.rem-calc(50px) f.rem-calc(60px);
+    > img {
+        object-fit: cover;
+        z-index: -1;
+    }
+    &__title-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__stats {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: f.rem-calc(35px);
+        margin: f.rem-calc(15px) 0;
+    }
+    &__map {
+        position: relative;
+        // height: 400px;
+        & > img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: $map-ratio;
+        }
+    }
+    &__provinsi {
+        margin-top: f.rem-calc(50px);
+    }
+}

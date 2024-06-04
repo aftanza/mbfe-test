@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
 import "./styles/globals.scss";
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import { theme } from "../theme";
 
 import "@mantine/core/styles.css";
 import StoreProvider from "./_utils/redux/StoreProvider";
-// const inter = Inter({ subsets: ["latin"] });
-// const montserrat = Montserrat({ subsets: ["latin"] });
+import { montserrat, workbench } from "./_globals/fonts";
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -21,12 +19,8 @@ export default function RootLayout({
         <html lang="en">
             <head>
                 <ColorSchemeScript />
-                {/* <meta
-                    name="viewport"
-                    content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
-                /> */}
             </head>
-            <body>
+            <body className={montserrat.className}>
                 <StoreProvider>
                     <MantineProvider theme={theme}>{children}</MantineProvider>
                 </StoreProvider>

@@ -1,9 +1,5 @@
-"use client";
-
-import { Montserrat } from "next/font/google";
 import { createTheme, px, rem, Text } from "@mantine/core";
-
-const montserrat = Montserrat({ subsets: ["latin"] });
+import { montserrat, workbench } from "./app/_globals/fonts";
 
 export const theme = createTheme({
     components: {},

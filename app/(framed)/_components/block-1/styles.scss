@@ -8,11 +8,16 @@ $img-ratio: calc($img-w-original/$img-h-original);
 $img-h: 261px;
 
 $image-top: calc(100% - 60px);
+
+$logo-h: 40px;
+$logo-w: 216;
+$logo-ratio: calc($logo-h / $logo-w);
 .block-1 {
     display: flex;
     justify-content: flex-end;
     position: relative;
     background-color: #005479;
+    // padding: f.rem-calc(10px) 0;
 
     &__text {
         position: absolute;
@@ -21,6 +26,20 @@ $image-top: calc(100% - 60px);
         top: 50%;
         transform: translateY(-50%);
         z-index: 2;
+        > h1 {
+            display: inline;
+        }
+
+        > img {
+            // background-color: aqua;
+            display: inline;
+            position: relative;
+
+            transform: translateY(f.rem-calc(13px));
+            margin-left: f.rem-calc(14px);
+
+            filter: contrast(0) brightness(100);
+        }
     }
     &__image {
         aspect-ratio: $img-ratio;
@@ -67,6 +86,12 @@ $image-top: calc(100% - 60px);
         }
         & h1 {
             font-size: 24px;
+        }
+        > img {
+            height: 30px;
+            width: auto;
+            aspect-ratio: $logo-ratio;
+            transform: translateY(f.rem-calc(10px));
         }
     }
 }

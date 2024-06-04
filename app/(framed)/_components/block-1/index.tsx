@@ -1,5 +1,3 @@
-"use client";
-
 import { Text, Title, rem } from "@mantine/core";
 import "./styles.scss";
 import Image from "next/image";
@@ -9,8 +7,16 @@ const Block1 = () => {
         <div className="block-1">
             <div className="block-1__text">
                 <Title order={1} lh={"2"} c={"white"}>
-                    Apa itu (insert logo)
+                    Apa itu
                 </Title>
+
+                <Image
+                    src={"/mb-logo.png"}
+                    width={216}
+                    height={40}
+                    alt={"mb-logo"}
+                    // className="block-1__text__inline-logo"
+                />
                 <Text
                     fw={500}
                     c={"white"}
@@ -32,8 +38,8 @@ const Block1 = () => {
                 <Image
                     src={"/homepage/block-1/school-visit.png"}
                     alt="School visit pic"
-                    fill={true}
-                    objectFit={"contain"}
+                    fill
+                    // objectFit={"contain"}
                 />
             </div>
         </div>

@@ -19,3 +19,22 @@ export type BoxHighlightProps = {
 export type TujuanUtamaPointProps = {
     lines: React.ReactNode[];
 };
+
+export type PisaScoreProps = {
+    pisaScore: number;
+    pisaTitle: string;
+    pisaOECDAverage: number;
+};
+
+export type MbStatsType = {
+    title: string;
+    description: string;
+};
+
+export type MbStatsProps = {
+    stats: MbStatsType;
+};
+
+export type ProvinsiProps = {
+    provinsi: string[];
+};

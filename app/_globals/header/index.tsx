@@ -2,6 +2,8 @@ import "./styles.scss";
 import HeaderMenus from "./_components/headerMenus";
 import { MenuItemType } from "../types";
 import HeaderMenusDrawer from "./_components/headerMenusDrawer";
+import Image from "next/image";
+import Link from "next/link";
 
 const menus: MenuItemType[] = [
     { name: "Homepage", page: "/", default: true },
@@ -13,7 +15,15 @@ const menus: MenuItemType[] = [
 const Header = () => {
     return (
         <div className="header">
-            <div className="header__logo">Logo here</div>
+            <div className="header__logo">
+                <Link
+                    href={{
+                        pathname: `/`,
+                    }}
+                >
+                    <Image src={"/mb-logo.png"} fill alt={"mb-logo"} />
+                </Link>
+            </div>
             <div className="header__menu">
                 <HeaderMenus menus={menus} />
             </div>

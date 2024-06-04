@@ -2,21 +2,21 @@
 
 .pisa {
     width: f.rem-calc(165px);
-    // display: grid;
-    // flex-direction: column;
-    // display: contents;
+
     &__box {
         background-color: #005479;
-        // display: inline;
-        padding: f.rem-calc(10px);
+
         text-align: center;
         border-radius: 24.217px;
         margin-bottom: f.rem-calc(15px);
+        padding: f.rem-calc(2px);
 
         h1 {
+            margin: 0;
             color: white;
             font-weight: 700;
             font-size: f.rem-calc(65px);
+            line-height: normal;
             text-shadow: 1.67px 1.67px 8.351px rgba(0, 0, 0, 0.25);
         }
     }

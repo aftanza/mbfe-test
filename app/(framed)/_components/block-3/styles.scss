@@ -45,11 +45,15 @@
                 width: 60%;
             }
         }
-        &__text-wrapper__text {
-            background-color: #fbbc05;
-            font-size: 32px;
-            font-weight: 700;
-            padding: f.rem-calc(10px) f.rem-calc(15px);
+        &__text-wrapper {
+            width: f.rem-calc(330px);
+            &__text {
+                background-color: #fbbc05;
+                font-size: 32px;
+                font-weight: 700;
+                padding: f.rem-calc(10px) f.rem-calc(15px);
+                text-align: center;
+            }
         }
     }
     &__modul__circle > img {
