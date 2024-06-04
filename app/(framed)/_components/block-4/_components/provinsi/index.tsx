@@ -1,17 +1,19 @@
 import { ProvinsiProps } from "@/app/_globals/types";
-import styles from "./provinsi.module.scss";
 import { Text } from "@mantine/core";
+import "./styles.scss";
 
 const Provinsi = ({ provinsi }: ProvinsiProps) => {
     let yellow = false;
     return (
-        <div className={styles.provinsiList}>
+        <div className="provinsi-list">
             {provinsi.map((currentProvinsi, index) => {
                 yellow = !yellow;
                 return (
                     <Text
-                        className={`${styles.provinsi} ${
-                            yellow ? styles.yellow : styles.blue
+                        className={`provinsi-list__provinsi ${
+                            yellow
+                                ? "provinsi-list__provinsi__yellow"
+                                : "provinsi-list__provinsi__blue"
                         }`}
                         key={index}
                     >

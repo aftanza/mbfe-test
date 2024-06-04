@@ -1,0 +1,24 @@
+@use "f";
+
+.provinsi-list {
+    display: flex;
+    gap: f.rem-calc(15px);
+    flex-wrap: wrap;
+    justify-content: center;
+    // height: fit-content;
+    &__provinsi {
+        border-radius: 10px;
+        display: inline-block;
+        padding: 0 f.rem-calc(10px);
+        font-weight: 600;
+
+        &__yellow {
+            background-color: #fbbc05;
+            color: black;
+        }
+        &__blue {
+            background-color: #005479;
+            color: white;
+        }
+    }
+}
