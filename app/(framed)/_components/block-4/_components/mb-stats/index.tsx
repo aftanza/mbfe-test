@@ -9,9 +9,6 @@ const MbStats = ({ stats }: MbStatsProps) => {
         <div className="stats">
             <div className="stats__title">
                 <h1 className={`${poppins.className}`}>{stats.title}</h1>
-                {/* <Title className={`${workbench.className}`}>
-                    {stats.title}
-                </Title> */}
             </div>
             <div className={`stats__description`}>
                 <div className="stats__description__wrapper">

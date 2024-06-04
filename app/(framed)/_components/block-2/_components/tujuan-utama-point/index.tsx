@@ -1,5 +1,3 @@
-"use client";
-
 import { Text } from "@mantine/core";
 
 import "./styles.scss";
@@ -16,12 +14,7 @@ const TujuanUtamaPoint = ({ lines }: TujuanUtamaPointProps) => {
                 {lines.map((line, index) => {
                     return (
                         <div className="tujuan-point__lines__line" key={index}>
-                            <Text
-                                className="tujuan-point__lines__line__text"
-                                c={"white"}
-                            >
-                                {line}
-                            </Text>
+                            <Text c={"white"}>{line}</Text>
                         </div>
                     );
                 })}

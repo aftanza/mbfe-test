@@ -1,8 +1,7 @@
-import { Montserrat, Inter, Poppins, Workbench } from "next/font/google";
+import { Montserrat, Inter, Poppins } from "next/font/google";
 
 export const montserrat = Montserrat({ subsets: ["latin"] });
 export const inter = Inter({ subsets: ["latin"] });
-export const workbench = Workbench({ subsets: ["latin"] });
 
 export const poppins = Poppins({
     subsets: ["latin"],

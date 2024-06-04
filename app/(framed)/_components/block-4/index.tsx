@@ -63,6 +63,13 @@ const Block4 = () => {
                 // objectFit={"contain"}
             />
             <div className="block-4__title-container">
+                <Image
+                    src={"/mb-logo.png"}
+                    width={216}
+                    height={40}
+                    alt={"mb-logo"}
+                    // className="block-1__text__inline-logo"
+                />
                 <Title className="block-4__title-container__title">
                     dalam angka
                 </Title>

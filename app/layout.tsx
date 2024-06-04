@@ -5,7 +5,7 @@ import { theme } from "../theme";
 
 import "@mantine/core/styles.css";
 import StoreProvider from "./_utils/redux/StoreProvider";
-import { montserrat, workbench } from "./_globals/fonts";
+import { montserrat } from "./_globals/fonts";
 
 export const metadata: Metadata = {
     title: "Create Next App",

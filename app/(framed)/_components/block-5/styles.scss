@@ -1,0 +1,47 @@
+@use "f";
+@use "var";
+
+$prize-w: 2667px;
+$prize-h: 1500px;
+// $prize-ratio: calc($prize-w/$prize-h);
+$prize-ratio: calc($prize-w/$prize-h);
+.block-5 {
+    background-color: #005479;
+    display: flex;
+    padding: f.rem-calc(50px) f.rem-calc(60px);
+    gap: f.rem-calc(60px);
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        & > h1 {
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+        }
+    }
+    &__image {
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: f.rem-calc(25px);
+        &__container > img {
+            // width: f.rem-calc(318px);
+            width: 318px;
+            height: auto;
+            aspect-ratio: $prize-ratio;
+            object-fit: cover;
+            border-radius: 10px;
+
+            /* Webdev tulisan */
+            box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.25);
+        }
+    }
+}
+
+@media only screen and (max-width: var.$screen-medium) {
+    .block-5 {
+        flex-direction: column;
+        gap: f.rem-calc(30px);
+    }
+}

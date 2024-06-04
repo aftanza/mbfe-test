@@ -38,3 +38,22 @@ export type MbStatsProps = {
 export type ProvinsiProps = {
     provinsi: string[];
 };
+
+export type PenghargaanPointProps = {
+    text: string;
+};
+
+export type TableMates = {
+    name: string;
+    title: string;
+    body: string;
+    extra?: string;
+};
+export type TableMatesProps = {
+    data: {
+        name: string;
+        title: string;
+        body: string;
+        extra?: string;
+    };
+};

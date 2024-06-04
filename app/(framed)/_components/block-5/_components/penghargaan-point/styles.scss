@@ -1,20 +1,19 @@
 @use "f";
 
-$top-gap: f.rem-calc(5px);
-$template-gap: f.rem-calc(15px);
+$gap: f.rem-calc(15px);
 
-.tujuan-point {
+.penghargaan-point {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     // align-items: center;
     &__circle-wrapper {
-        margin: $top-gap calc(2 * $top-gap) 0 0;
+        margin: 0 f.rem-calc(10px) 0 0;
         &__circle {
             width: f.rem-calc(32px);
             aspect-ratio: 1;
             border-radius: 45.714px;
-            background: #fff;
+            background: #f57600;
 
             /* Webdev tulisan */
             box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.25);
@@ -22,13 +21,13 @@ $template-gap: f.rem-calc(15px);
     }
 }
 
-.tujuan-point__lines {
+.penghargaan-point__lines {
     flex: 1;
-    margin-bottom: $template-gap - $top-gap;
+    margin-bottom: $gap;
     &__line {
+        // display: flex;
         display: inline-block;
-        margin-top: $top-gap;
-        background-color: #005479;
-        padding: 0px $template-gap;
+        background-color: #fbbc05;
+        padding: 0px $gap;
     }
 }

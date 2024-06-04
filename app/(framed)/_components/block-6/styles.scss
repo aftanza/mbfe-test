@@ -1,0 +1,54 @@
+@use "f";
+@use "var";
+
+.block-6 {
+    display: flex;
+    background-color: #ffba2c;
+    padding: f.rem-calc(50px) f.rem-calc(60px);
+
+    &__left {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+        &__title {
+            width: 100%;
+            display: block;
+
+            margin-bottom: f.rem-calc(15px);
+
+            &__container > h1 {
+                text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+                font-style: normal;
+            }
+        }
+        &__tablemates {
+            display: flex;
+            position: relative;
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+
+            &__img-container {
+                position: absolute;
+                top: f.rem-calc(20px);
+                right: f.rem-calc(30px);
+            }
+            &__img-container > img {
+                width: f.rem-calc(240px);
+                height: auto;
+                aspect-ratio: 1;
+            }
+        }
+    }
+    &__right {
+        flex: 1;
+        display: flex;
+        // justify-content: center;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        // gap: 30px;
+    }
+}
