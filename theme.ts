@@ -1,5 +1,5 @@
 import { createTheme, px, rem, Text } from "@mantine/core";
-import { montserrat, workbench } from "./app/_globals/fonts";
+import { montserrat } from "./app/_globals/fonts";
 
 export const theme = createTheme({
     components: {},
