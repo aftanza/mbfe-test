@@ -30,8 +30,8 @@ $template-gap: f.rem-calc(15px);
         margin-top: $top-gap;
 
         &__text {
-            background-color: #005479;
-            padding: 0px $template-gap;
+            background-color: #005479 !important;
+            padding: 0px $template-gap !important;
         }
     }
 }
