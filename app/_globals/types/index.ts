@@ -40,7 +40,7 @@ export type ProvinsiProps = {
 };
 
 export type PenghargaanPointProps = {
-    text: string;
+    lines: string[];
 };
 
 export type TableMates = {

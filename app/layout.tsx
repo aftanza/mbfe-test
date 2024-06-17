@@ -22,6 +22,10 @@ export default function RootLayout({
         <html lang="en">
             <head>
                 <ColorSchemeScript />
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1, minimum-scale=1"
+                />
             </head>
             <body
                 className={`${montserrat.className} ${styles.rootStyle} `}

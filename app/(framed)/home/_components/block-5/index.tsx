@@ -5,64 +5,18 @@ import PenghargaanPoint from "./_components/penghargaan-point";
 import "./styles.scss";
 import Image from "next/image";
 
-import { useDisclosure } from "@mantine/hooks";
-import { Modal, Button } from "@mantine/core";
-
-import testImage from "/public/homepage/block-5/prize-1.png";
+import { useDisclosure, useViewportSize } from "@mantine/hooks";
 
 import "photoswipe/dist/photoswipe.css";
 import { Gallery, Item } from "react-photoswipe-gallery";
 
+import screenWidths from "@/app/styles/export.module.scss";
+
 const Block5 = () => {
-    const [modalOpened, { open: modalOpen, close: modalClose }] =
-        useDisclosure(false);
+    const { height: viewHeight, width: viewWidth } = useViewportSize();
+
     return (
         <div className="block-5">
-            {/* <img
-                src={"/homepage/block-5/prize-1.png"}
-                alt="Kyoto Shinkin Bank Prize"
-            /> */}
-            {/* <Modal
-                opened={modalOpened}
-                onClose={modalClose}
-                centered
-                // fullScreen
-                size={"100%"}
-                // removeScrollProps={{ allowPinchZoom: true }}
-                // withCloseButton={false}
-                style={{ zIndex: 1000 }}
-                // overlayProps={{
-                //     style: { position: "relative" },
-                // }}
-                withinPortal={true}
-                // portalProps={{ style: { position: "relative" } }}
-            >
-                <div
-                    className="tasdhjuigasyuidg"
-                    style={{
-                        position: "relative",
-                        height: "80vh",
-                        width: "100%",
-                        // overflow: "hidden",
-                        // padding: "10em",
-                        // margin: "50px 50px",
-                    }}
-                >
-                    <Image
-                        src={"/homepage/block-5/prize-1.png"}
-                        alt="Kyoto Shinkin Bank Prize"
-                        // width={2667}
-                        // height={1500}
-                        style={{
-                            objectFit: "contain",
-                            // width: "100%",
-                            // height: "500px",
-                        }}
-                        // objectFit={"cover"}
-                        fill
-                    />
-                </div>
-            </Modal> */}
             <div className="block-5__text">
                 <Title c={"white"}>Penghargaan Open Chat</Title>
                 <Text c={"white"}>
@@ -74,10 +28,35 @@ const Block5 = () => {
                     dan memperoleh penghargaan dari:
                 </Text>
                 <div className="block-5__text__point-container">
-                    <PenghargaanPoint text={"The Kyoto Shinkin Bank Prize"} />
-                    <PenghargaanPoint
-                        text={"Kyoto Wisdom Industry Creation Center Prize"}
-                    />
+                    {viewWidth >= parseInt(screenWidths.screenMedium, 10) ? (
+                        <PenghargaanPoint
+                            lines={["The Kyoto Shinkin Bank Prize"]}
+                        />
+                    ) : (
+                        ""
+                    )}
+
+                    {viewWidth >= 1300 ? (
+                        <PenghargaanPoint
+                            lines={[
+                                "Kyoto Wisdom Industry Creation Center Prize",
+                            ]}
+                        />
+                    ) : (
+                        ""
+                    )}
+
+                    {viewWidth >= parseInt(screenWidths.screenMedium, 10) &&
+                    viewWidth < 1300 ? (
+                        <PenghargaanPoint
+                            lines={[
+                                "Kyoto Wisdom Industry",
+                                "Creation Center Prize",
+                            ]}
+                        />
+                    ) : (
+                        ""
+                    )}
                 </div>
             </div>
             <div className="block-5__image">
@@ -101,16 +80,14 @@ const Block5 = () => {
                             )}
                         </Item>
                     </Gallery>
-                    {/* <Image
-                            src={"/homepage/block-5/prize-1.png"}
-                            alt="Kyoto Shinkin Bank Prize"
-                            width={2667}
-                            height={1500}
-                            onClick={() => {
-                                console.log("asdkolasjd");
-                                // modalOpen();
-                            }}
-                        /> */}
+
+                    {viewWidth < parseInt(screenWidths.screenMedium, 10) ? (
+                        <PenghargaanPoint
+                            lines={["The Kyoto Shinkin", "Bank Prize"]}
+                        />
+                    ) : (
+                        ""
+                    )}
                 </div>
                 <div className="block-5__image__container">
                     <Gallery>
@@ -132,12 +109,16 @@ const Block5 = () => {
                             )}
                         </Item>
                     </Gallery>
-                    {/* <Image
-                        src={"/homepage/block-5/prize-2.png"}
-                        alt="Kyoto Wisdom Industry Creation Center Prize"
-                        width={2667}
-                        height={1500}
-                    /> */}
+                    {viewWidth < parseInt(screenWidths.screenMedium, 10) ? (
+                        <PenghargaanPoint
+                            lines={[
+                                "Kyoto Wisdom Industry",
+                                "Creation Center Prize",
+                            ]}
+                        />
+                    ) : (
+                        ""
+                    )}
                 </div>
             </div>
         </div>

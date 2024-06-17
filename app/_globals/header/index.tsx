@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const menus: MenuItemType[] = [
-    { name: "Homepage", page: "/", default: true },
+    { name: "Homepage", page: "/home", default: true },
     { name: "Kelas Gratis", page: "/kelas-gratis" },
     { name: "Modul belajar", page: "/modul-belajar" },
     { name: "Kontribusi", page: "/kontribusi" },
@@ -18,7 +18,7 @@ const Header = () => {
             <div className="header__logo">
                 <Link
                     href={{
-                        pathname: `/`,
+                        pathname: `/home`,
                     }}
                 >
                     <Image

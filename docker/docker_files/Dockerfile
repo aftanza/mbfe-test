@@ -1,20 +1,23 @@
-# install python
-FROM node:22.2.0
+FROM node:22.2.0-alpine
 
 WORKDIR /app
 
-RUN apt-get update && \
-    apt-get install -y netcat-openbsd gettext
+RUN apk update && apk add netcat-openbsd gettext
 
-RUN npm i -g npm@latest
+RUN npm i -g npm@10.8.0
 
-COPY ./package.json .
+# COPY package.json package-lock.json ./
+COPY package.json ./
+
+# RUN npm install -D @swc/cli @swc/core
+# RUN npm install @swc/core-linux-arm64-gnu 
+# RUN npm ci
+RUN npm i -D @swc/cli @swc/core @swc/core-linux-musl
 RUN npm install
-
 
 COPY . .
 
-RUN chmod +x ./docker/entrypoints/entrypoint.sh ;
+# RUN chmod +x ./docker/entrypoints/entrypoint.sh ;
 
 EXPOSE 8000
 # ENTRYPOINT ["./docker/entrypoints/entrypoint.sh"]

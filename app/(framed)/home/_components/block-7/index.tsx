@@ -30,7 +30,7 @@ const Block7 = () => {
                                 <div
                                     className={"block-7__slide-container__item"}
                                 >
-                                    {screenWidths.screenMedium}
+                                    {parseInt(screenWidths.screenMedium, 10)}
                                 </div>
                             </div>
                         </Carousel.Slide>

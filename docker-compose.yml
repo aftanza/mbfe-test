@@ -10,8 +10,6 @@ services:
         ports:
             - "8000:8000"
         volumes:
-            - .:/app
-        # environment:
-        #     - NODE_ENV=development
+            - .:/app:delegated
         command: npm run dev
 # W.I.P. Still doesn't work for npm run dev.
