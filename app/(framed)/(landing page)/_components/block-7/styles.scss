@@ -1,0 +1,87 @@
+@use "var";
+@use "f";
+
+.mantine-Carousel-root
+    .mantine-Carousel-viewport
+    .mantine-Carousel-container
+    .mantine-Carousel-slide {
+    // background-color: red;
+    // height: f.rem-calc(180px);
+    // width: 318px;
+    // padding: 0;
+    // margin: 0 f.rem-calc(50px);
+    .block-7__slide-container {
+        position: relative;
+        background-color: aqua;
+        // height: 400px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding: 0 f.rem-calc(10px);
+        &__item {
+            // flex: 1;
+            // width: 318px;
+            // width: calc(100% - 40px);
+            height: f.rem-calc(181px);
+            width: 100%;
+            background-color: red;
+            border-radius: 40px;
+        }
+    }
+}
+
+// .mantine-Carousel-root .mantine-Carousel-viewport {
+// height: f.rem-calc(360px);
+// .mantine-Carousel-container {
+//     // height: 180px;
+//     // width: 318px;
+// }
+// }
+
+// .block-7 .
+.block-7 {
+    // background-color: var.$orange;
+    background-color: wheat;
+    position: relative;
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     height: auto;
+    //     background-color: blue;
+    //     width: f.rem-calc(500px);
+    // }
+    &__decor {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        // background-color: blue;
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            background: linear-gradient(
+                270deg,
+                rgba(245, 118, 0, 0) 0%,
+                var.$orange 87.9%
+            );
+            width: f.rem-calc(500px);
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            height: 100%;
+            // background-color: blue;
+            background: linear-gradient(
+                90deg,
+                rgba(245, 118, 0, 0) 0%,
+                var.$orange 87.9%
+            );
+            width: f.rem-calc(500px);
+            right: 0;
+            // float: right;
+        }
+    }
+}

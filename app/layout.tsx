@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
-import "./styles/globals.scss";
+
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import { theme } from "../theme";
-
-import "@mantine/core/styles.css";
-import StoreProvider from "./_utils/redux/StoreProvider";
 import { montserrat } from "./_globals/fonts";
+import "@mantine/carousel/styles.css";
+import "@mantine/core/styles.css";
+import "./styles/globals.scss";
+import styles from "./root.module.scss";
+
+import StoreProvider from "./_utils/redux/StoreProvider";
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -20,7 +23,10 @@ export default function RootLayout({
             <head>
                 <ColorSchemeScript />
             </head>
-            <body className={montserrat.className}>
+            <body
+                className={`${montserrat.className} ${styles.rootStyle} `}
+                id="root"
+            >
                 <StoreProvider>
                     <MantineProvider theme={theme}>{children}</MantineProvider>
                 </StoreProvider>

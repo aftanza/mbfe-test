@@ -4,6 +4,10 @@ $map-w: f.rem-calc(1320px);
 $map-h: f.rem-calc(479px);
 $map-ratio: calc($map-w / $map-h);
 
+$logo-h: 40px;
+$logo-w: 216;
+$logo-ratio: calc($logo-h / $logo-w);
+
 .block-4 {
     position: relative;
     padding: f.rem-calc(50px) f.rem-calc(60px);
@@ -21,6 +25,10 @@ $map-ratio: calc($map-w / $map-h);
             transform: translateY(f.rem-calc(5px));
             margin-right: f.rem-calc(14px);
             filter: contrast(0) brightness(0);
+
+            height: $logo-h;
+            width: auto;
+            aspect-ratio: $logo-ratio;
         }
     }
     &__stats {

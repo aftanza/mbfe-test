@@ -6,11 +6,11 @@ type LayoutProps = {
 
 export default function Layout({ children }: LayoutProps) {
     return (
-        <>
+        <div>
             <Header />
 
-            <div className="">{children}</div>
+            <>{children}</>
             {/* <Footer /> */}
-        </>
+        </div>
     );
 }

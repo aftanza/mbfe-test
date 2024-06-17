@@ -1,5 +1,8 @@
 import { createTheme, px, rem, Text } from "@mantine/core";
 import { montserrat } from "./app/_globals/fonts";
+import screenWidths from "@/app/styles/export.module.scss";
+
+const regex = /^"|"$/g;
 
 export const theme = createTheme({
     components: {},
@@ -26,4 +29,18 @@ export const theme = createTheme({
             },
         },
     },
+    breakpoints: {
+        xs: "30em",
+        sm: screenWidths.screenSmall.replace(regex, ""),
+        md: screenWidths.screenMedium.replace(regex, ""),
+        lg: screenWidths.screenLarge.replace(regex, ""),
+        xl: "90em",
+    },
+    // breakpoints: {
+    //     xs: "30em",
+    //     sm: "48em",
+    //     md: "64em",
+    //     lg: "74em",
+    //     xl: "90em",
+    // },
 });

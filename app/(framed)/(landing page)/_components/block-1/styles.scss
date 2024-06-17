@@ -27,16 +27,19 @@ $logo-ratio: calc($logo-h / $logo-w);
         transform: translateY(-50%);
         z-index: 2;
 
-        // filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.25));
+        filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.25));
         > h1 {
             display: inline;
-            filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.25));
         }
 
         > img {
             // background-color: aqua;
             display: inline;
             position: relative;
+
+            height: $logo-h;
+            width: auto;
+            aspect-ratio: $logo-ratio;
 
             transform: translateY(f.rem-calc(13px));
             margin-left: f.rem-calc(14px);
@@ -82,19 +85,58 @@ $logo-ratio: calc($logo-h / $logo-w);
     }
 }
 
-@media only screen and (max-width: var.$screen-medium) {
+@media only screen and (max-width: var.$screen-medium) and (min-width: var.$screen-small) {
     .block-1__text {
-        & p {
-            font-size: 16px;
+        width: 65%;
+    }
+    .block-1__image {
+        height: calc($img-h + f.rem-calc(150px));
+        &::before {
+            height: calc($img-h + f.rem-calc(150px));
+            background: linear-gradient(
+                270deg,
+                rgba(0, 0, 0, 0) 2.08%,
+                var.$blue 60%
+            );
         }
-        & h1 {
-            font-size: 24px;
+        &::after {
+            height: calc($img-h + f.rem-calc(150px));
         }
-        > img {
-            height: 30px;
+    }
+}
+
+@media only screen and (max-width: var.$screen-small) {
+    .block-1 {
+        display: block;
+        position: relative;
+        &__text {
+            position: relative;
+            transform: none;
+            left: auto;
+            top: auto;
             width: auto;
-            aspect-ratio: $logo-ratio;
-            transform: translateY(f.rem-calc(10px));
+            padding: f.rem-calc(30px);
+
+            & p {
+                font-size: 14px;
+            }
+            & h1 {
+                font-size: 24px;
+            }
+            // > img {
+            //     height: 30px;
+            //     width: auto;
+            //     aspect-ratio: $logo-ratio;
+            //     transform: translateY(f.rem-calc(10px));
+            // }
+            > img {
+                height: f.rem-calc(26px);
+                transform: translateY(f.rem-calc(8px));
+                filter: contrast(0) brightness(100);
+            }
+        }
+        &__image {
+            display: none;
         }
     }
 }

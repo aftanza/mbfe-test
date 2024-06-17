@@ -13,8 +13,13 @@ const TujuanUtamaPoint = ({ lines }: TujuanUtamaPointProps) => {
             <div className="tujuan-point__lines">
                 {lines.map((line, index) => {
                     return (
-                        <div className="tujuan-point__lines__line" key={index}>
-                            <Text c={"white"}>{line}</Text>
+                        <div
+                            className="tujuan-point__lines__line-wrapper"
+                            key={index}
+                        >
+                            <div className="tujuan-point__lines__line">
+                                <Text c={"white"}>{line}</Text>
+                            </div>
                         </div>
                     );
                 })}

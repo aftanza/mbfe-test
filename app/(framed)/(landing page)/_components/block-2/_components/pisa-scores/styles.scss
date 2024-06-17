@@ -1,0 +1,109 @@
+@use "f";
+@use "var";
+
+.pisa {
+    width: f.rem-calc(165px);
+
+    &__box {
+        background-color: #005479;
+
+        text-align: center;
+        border-radius: 24.217px;
+        margin-bottom: f.rem-calc(15px);
+        padding: f.rem-calc(2px);
+
+        h1 {
+            margin: 0;
+            color: white;
+            font-weight: 700;
+            font-size: f.rem-calc(65px);
+            line-height: normal;
+            text-shadow: 1.67px 1.67px 8.351px rgba(0, 0, 0, 0.25);
+        }
+    }
+    &__title {
+        background-color: #ffba2c;
+        margin-bottom: f.rem-calc(7px);
+
+        p {
+            color: #000;
+
+            text-align: center;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 180%; /* 28.8px */
+        }
+    }
+    &__average-desc {
+        p {
+            color: #fff;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 125%; /* 20px */
+        }
+    }
+}
+
+@media only screen and (max-width: 1356px) and (min-width: var.$screen-medium) {
+    .pisa {
+        width: auto;
+    }
+    .pisa__box h1 {
+        font-size: f.rem-calc(50px);
+    }
+    .pisa__title p {
+        font-size: 12px;
+    }
+    .pisa__average-desc p {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: var.$screen-small) and (max-width: var.$screen-medium) {
+    .pisa {
+        width: auto;
+    }
+    .pisa__box h1 {
+        font-size: f.rem-calc(55px);
+    }
+    .pisa__title p {
+        font-size: 14px;
+    }
+    .pisa__average-desc p {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: var.$screen-small) {
+    .pisa {
+        width: auto;
+        &__box {
+            border-radius: 17px;
+        }
+    }
+    .pisa__box h1 {
+        font-size: f.rem-calc(40px);
+    }
+    .pisa__title p {
+        font-size: 11px;
+    }
+    .pisa__average-desc p {
+        font-size: 11px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 428px) {
+    .pisa {
+        width: auto;
+    }
+    .pisa__box h1 {
+        font-size: f.rem-calc(25px);
+    }
+    .pisa__title p {
+        font-size: 7px;
+    }
+    .pisa__average-desc p {
+        font-size: 7px;
+    }
+}

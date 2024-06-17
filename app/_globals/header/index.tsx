@@ -21,7 +21,12 @@ const Header = () => {
                         pathname: `/`,
                     }}
                 >
-                    <Image src={"/mb-logo.png"} fill alt={"mb-logo"} />
+                    <Image
+                        src={"/mb-logo.png"}
+                        width={2186}
+                        height={406}
+                        alt={"mb-logo"}
+                    />
                 </Link>
             </div>
             <div className="header__menu">

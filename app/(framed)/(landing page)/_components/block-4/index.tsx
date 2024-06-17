@@ -65,8 +65,8 @@ const Block4 = () => {
             <div className="block-4__title-container">
                 <Image
                     src={"/mb-logo.png"}
-                    width={216}
-                    height={40}
+                    width={2000}
+                    height={400}
                     alt={"mb-logo"}
                     // className="block-1__text__inline-logo"
                 />

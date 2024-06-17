@@ -1,0 +1,7 @@
+@use "var";
+
+:export {
+    screenSmall: var.$screen-small;
+    screenMedium: var.$screen-medium;
+    screenLarge: var.$screen-large;
+}

@@ -20,9 +20,13 @@ $logo-ratio: calc(2186 / 406);
         height: f.rem-calc(37px);
         aspect-ratio: $logo-ratio;
         position: relative;
+        & a > img {
+            height: 100%;
+            width: auto;
+        }
     }
     &__menu {
         display: flex;
     }
-    z-index: 1000;
+    z-index: 100;
 }

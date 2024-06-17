@@ -1,4 +1,5 @@
 @use "f";
+@use "var";
 
 $top-gap: f.rem-calc(5px);
 $template-gap: f.rem-calc(15px);
@@ -24,11 +25,17 @@ $template-gap: f.rem-calc(15px);
 
 .tujuan-point__lines {
     flex: 1;
-    margin-bottom: $template-gap - $top-gap;
+    margin-bottom: calc($template-gap - $top-gap);
     &__line {
         display: inline-block;
         margin-top: $top-gap;
         background-color: #005479;
         padding: 0px $template-gap;
+    }
+}
+
+@media only screen and (max-width: var.$screen-small) {
+    .tujuan-point__lines__line > p {
+        font-size: f.rem-calc(14px);
     }
 }

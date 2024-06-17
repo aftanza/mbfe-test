@@ -1,0 +1,41 @@
+@use "f";
+@use "var";
+
+$top-gap: f.rem-calc(5px);
+$template-gap: f.rem-calc(15px);
+
+.tujuan-point {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    // align-items: center;
+    &__circle-wrapper {
+        margin: $top-gap calc(2 * $top-gap) 0 0;
+        &__circle {
+            width: f.rem-calc(32px);
+            aspect-ratio: 1;
+            border-radius: 45.714px;
+            background: #fff;
+
+            /* Webdev tulisan */
+            box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.25);
+        }
+    }
+}
+
+.tujuan-point__lines {
+    flex: 1;
+    margin-bottom: calc($template-gap - $top-gap);
+    &__line {
+        display: inline-block;
+        margin-top: $top-gap;
+        background-color: #005479;
+        padding: 0px $template-gap;
+    }
+}
+
+@media only screen and (max-width: var.$screen-small) {
+    .tujuan-point__lines__line > p {
+        font-size: f.rem-calc(14px);
+    }
+}

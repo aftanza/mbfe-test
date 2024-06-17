@@ -12,16 +12,12 @@ const Block1 = () => {
 
                 <Image
                     src={"/mb-logo.png"}
-                    width={216}
-                    height={40}
+                    width={2000}
+                    height={400}
                     alt={"mb-logo"}
                     // className="block-1__text__inline-logo"
                 />
-                <Text
-                    fw={500}
-                    c={"white"}
-                    style={{ textAlign: "justify", wordSpacing: rem(5) }}
-                >
+                <Text fw={500} c={"white"}>
                     <Text span fw={700} inherit>
                         mejabelajar
                     </Text>{" "}
@@ -39,6 +35,8 @@ const Block1 = () => {
                     src={"/homepage/block-1/school-visit.png"}
                     alt="School visit pic"
                     fill
+                    sizes=""
+                    // height={"261"}
                     // objectFit={"contain"}
                 />
             </div>
