@@ -1,4 +1,5 @@
 @use "f";
+@use "var";
 
 .provinsi-list {
     display: flex;
@@ -11,6 +12,8 @@
         display: inline-block;
         padding: 0 f.rem-calc(10px) !important;
         font-weight: 600 !important;
+        // font-size: 1.5vw;
+        // line-height: 180%;
 
         &__yellow {
             background-color: #fbbc05;
@@ -19,6 +22,27 @@
         &__blue {
             background-color: #005479;
             color: white !important;
+        }
+    }
+}
+
+@media only screen and (min-width: var.$screen-small) and (max-width: var.$screen-medium) {
+    .provinsi-list {
+        gap: 1.5vw;
+        &__provinsi {
+            border-radius: 8px;
+            font-size: 1.5vw;
+            line-height: 180%;
+        }
+    }
+}
+@media only screen and (max-width: var.$screen-small) {
+    .provinsi-list {
+        gap: 1.5vw;
+        &__provinsi {
+            border-radius: 8px;
+            font-size: f.rem-calc(8px);
+            line-height: 180%;
         }
     }
 }

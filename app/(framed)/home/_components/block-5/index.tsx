@@ -5,7 +5,7 @@ import PenghargaanPoint from "./_components/penghargaan-point";
 import "./styles.scss";
 import Image from "next/image";
 
-import { useDisclosure, useViewportSize } from "@mantine/hooks";
+import { useViewportSize } from "@mantine/hooks";
 
 import "photoswipe/dist/photoswipe.css";
 import { Gallery, Item } from "react-photoswipe-gallery";

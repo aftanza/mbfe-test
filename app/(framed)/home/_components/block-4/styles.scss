@@ -1,12 +1,13 @@
 @use "f";
+@use "var";
 
 $map-w: f.rem-calc(1320px);
 $map-h: f.rem-calc(479px);
 $map-ratio: calc($map-w / $map-h);
 
-$logo-h: 40px;
-$logo-w: 216;
-$logo-ratio: calc($logo-h / $logo-w);
+$logo-h: f.rem-calc(40px);
+$logo-w: f.rem-calc(216px);
+$logo-ratio: calc($logo-w / $logo-h);
 
 .block-4 {
     position: relative;
@@ -34,7 +35,9 @@ $logo-ratio: calc($logo-h / $logo-w);
     &__stats {
         display: grid;
         grid-template-columns: auto auto auto auto;
-        gap: f.rem-calc(35px);
+        // grid-template-columns: repeat(4, minmax(0, 1fr));
+        // gap: f.rem-calc(35px);
+        gap: 2vw;
         margin: f.rem-calc(15px) 0;
     }
     &__map {
@@ -48,5 +51,66 @@ $logo-ratio: calc($logo-h / $logo-w);
     }
     &__provinsi {
         margin-top: f.rem-calc(50px);
+    }
+}
+
+@media only screen and (min-width: var.$screen-small) and (max-width: var.$screen-medium) {
+    .block-4 {
+        &__title-container {
+            & > h1 {
+                font-size: f.rem-calc(30px);
+            }
+            & > img {
+                height: 35px;
+                width: auto;
+                aspect-ratio: $logo-ratio;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: var.$screen-small) {
+    .block-4 {
+        padding: f.rem-calc(30px);
+    }
+}
+
+@media only screen and (min-width: 410px) and (max-width: var.$screen-small) {
+    .block-4 {
+        &__title-container {
+            flex-direction: column;
+            & > h1 {
+                font-size: f.rem-calc(24px);
+            }
+            & > img {
+                height: 26px;
+                margin-right: f.rem-calc(0px);
+                margin-bottom: f.rem-calc(10px);
+                transform: translateY(0);
+            }
+        }
+    }
+}
+@media only screen and (min-width: 320px) and (max-width: 410px) {
+    .block-4 {
+        &__stats {
+            grid-template-columns: 85px 85px;
+            grid-template-rows: auto auto;
+            row-gap: 20px;
+            column-gap: 4vw;
+            justify-content: center;
+        }
+        &__title-container {
+            flex-direction: column;
+            & > h1 {
+                font-size: f.rem-calc(24px);
+            }
+            & > img {
+                height: 26px;
+                margin-right: f.rem-calc(0px);
+                margin-bottom: f.rem-calc(10px);
+                transform: translateY(0);
+            }
+        }
     }
 }
